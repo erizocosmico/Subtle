@@ -10,6 +10,10 @@
 		4D869A5F1C629631002ACFBE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D869A5E1C629631002ACFBE /* AppDelegate.swift */; };
 		4D869A611C629631002ACFBE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D869A601C629631002ACFBE /* Assets.xcassets */; };
 		4D869A641C629631002ACFBE /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D869A621C629631002ACFBE /* MainMenu.xib */; };
+		4D869A6D1C629953002ACFBE /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D869A6B1C629953002ACFBE /* MasterViewController.swift */; };
+		4D869A6E1C629953002ACFBE /* MasterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D869A6C1C629953002ACFBE /* MasterViewController.xib */; };
+		4D869A731C629DF5002ACFBE /* Subtitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D869A721C629DF5002ACFBE /* Subtitle.swift */; };
+		4D869A751C62A57B002ACFBE /* MovieDraggable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D869A741C62A57B002ACFBE /* MovieDraggable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -18,6 +22,10 @@
 		4D869A601C629631002ACFBE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4D869A631C629631002ACFBE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		4D869A651C629631002ACFBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4D869A6B1C629953002ACFBE /* MasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
+		4D869A6C1C629953002ACFBE /* MasterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MasterViewController.xib; sourceTree = "<group>"; };
+		4D869A721C629DF5002ACFBE /* Subtitle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Subtitle.swift; sourceTree = "<group>"; };
+		4D869A741C62A57B002ACFBE /* MovieDraggable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieDraggable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,12 +58,32 @@
 		4D869A5D1C629631002ACFBE /* Subtle */ = {
 			isa = PBXGroup;
 			children = (
-				4D869A5E1C629631002ACFBE /* AppDelegate.swift */,
+				4D869A711C629DE3002ACFBE /* Model */,
+				4D869A701C629ABA002ACFBE /* UI */,
 				4D869A601C629631002ACFBE /* Assets.xcassets */,
-				4D869A621C629631002ACFBE /* MainMenu.xib */,
 				4D869A651C629631002ACFBE /* Info.plist */,
 			);
 			path = Subtle;
+			sourceTree = "<group>";
+		};
+		4D869A701C629ABA002ACFBE /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				4D869A5E1C629631002ACFBE /* AppDelegate.swift */,
+				4D869A621C629631002ACFBE /* MainMenu.xib */,
+				4D869A6B1C629953002ACFBE /* MasterViewController.swift */,
+				4D869A6C1C629953002ACFBE /* MasterViewController.xib */,
+				4D869A741C62A57B002ACFBE /* MovieDraggable.swift */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		4D869A711C629DE3002ACFBE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4D869A721C629DF5002ACFBE /* Subtitle.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -118,6 +146,7 @@
 			files = (
 				4D869A611C629631002ACFBE /* Assets.xcassets in Resources */,
 				4D869A641C629631002ACFBE /* MainMenu.xib in Resources */,
+				4D869A6E1C629953002ACFBE /* MasterViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -128,6 +157,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D869A751C62A57B002ACFBE /* MovieDraggable.swift in Sources */,
+				4D869A731C629DF5002ACFBE /* Subtitle.swift in Sources */,
+				4D869A6D1C629953002ACFBE /* MasterViewController.swift in Sources */,
 				4D869A5F1C629631002ACFBE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
