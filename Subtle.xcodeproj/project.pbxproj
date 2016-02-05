@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		41E15DA8B4880DC8F2B42888 /* Pods_Subtle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A038DE9E7C573831D6516F93 /* Pods_Subtle.framework */; };
 		4D869A5F1C629631002ACFBE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D869A5E1C629631002ACFBE /* AppDelegate.swift */; };
 		4D869A611C629631002ACFBE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D869A601C629631002ACFBE /* Assets.xcassets */; };
 		4D869A641C629631002ACFBE /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D869A621C629631002ACFBE /* MainMenu.xib */; };
@@ -26,6 +27,9 @@
 		4D869A6C1C629953002ACFBE /* MasterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MasterViewController.xib; sourceTree = "<group>"; };
 		4D869A721C629DF5002ACFBE /* Subtitle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Subtitle.swift; sourceTree = "<group>"; };
 		4D869A741C62A57B002ACFBE /* MovieDraggable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieDraggable.swift; sourceTree = "<group>"; };
+		68EEADF95286D34C394800BF /* Pods-Subtle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Subtle.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Subtle/Pods-Subtle.debug.xcconfig"; sourceTree = "<group>"; };
+		A038DE9E7C573831D6516F93 /* Pods_Subtle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Subtle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC221EA3B77A05056D6FF04B /* Pods-Subtle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Subtle.release.xcconfig"; path = "Pods/Target Support Files/Pods-Subtle/Pods-Subtle.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41E15DA8B4880DC8F2B42888 /* Pods_Subtle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +49,8 @@
 			children = (
 				4D869A5D1C629631002ACFBE /* Subtle */,
 				4D869A5C1C629631002ACFBE /* Products */,
+				54938BBDDD6C56D394437C7E /* Pods */,
+				983AFB118EA047DA304B7C89 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,6 +93,23 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
+		54938BBDDD6C56D394437C7E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				68EEADF95286D34C394800BF /* Pods-Subtle.debug.xcconfig */,
+				DC221EA3B77A05056D6FF04B /* Pods-Subtle.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		983AFB118EA047DA304B7C89 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A038DE9E7C573831D6516F93 /* Pods_Subtle.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -93,9 +117,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4D869A681C629631002ACFBE /* Build configuration list for PBXNativeTarget "Subtle" */;
 			buildPhases = (
+				879F920683A9C324D517893B /* Check Pods Manifest.lock */,
 				4D869A571C629631002ACFBE /* Sources */,
 				4D869A581C629631002ACFBE /* Frameworks */,
 				4D869A591C629631002ACFBE /* Resources */,
+				2D48B6984EE936571371CDD4 /* Embed Pods Frameworks */,
+				A12EAC330B18C2E3C21E97C3 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -151,6 +178,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2D48B6984EE936571371CDD4 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Subtle/Pods-Subtle-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		879F920683A9C324D517893B /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A12EAC330B18C2E3C21E97C3 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Subtle/Pods-Subtle-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4D869A571C629631002ACFBE /* Sources */ = {
@@ -260,6 +335,7 @@
 		};
 		4D869A691C629631002ACFBE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 68EEADF95286D34C394800BF /* Pods-Subtle.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -272,6 +348,7 @@
 		};
 		4D869A6A1C629631002ACFBE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DC221EA3B77A05056D6FF04B /* Pods-Subtle.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -301,6 +378,7 @@
 				4D869A6A1C629631002ACFBE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
