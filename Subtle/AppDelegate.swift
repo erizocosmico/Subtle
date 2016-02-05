@@ -36,7 +36,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                         $0.absoluteString.startIndex.advancedBy(7)
                     )
                 }.forEach{ path in
-                    self.masterViewController.queueFile(path)
+                    if isMovie(path) {
+                        self.masterViewController.queueFile(path)
+                    }
                 }
             }
         }

@@ -15,7 +15,18 @@
 		4D869A6E1C629953002ACFBE /* MasterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D869A6C1C629953002ACFBE /* MasterViewController.xib */; };
 		4D869A731C629DF5002ACFBE /* Subtitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D869A721C629DF5002ACFBE /* Subtitle.swift */; };
 		4D869A751C62A57B002ACFBE /* MovieDraggable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D869A741C62A57B002ACFBE /* MovieDraggable.swift */; };
+		4DFE54061C64A51D003033FB /* MovieTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFE54051C64A51D003033FB /* MovieTest.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4DFE54001C64A501003033FB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4D869A531C629631002ACFBE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4D869A5A1C629631002ACFBE;
+			remoteInfo = Subtle;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		4D869A5B1C629631002ACFBE /* Subtle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Subtle.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -27,6 +38,9 @@
 		4D869A6C1C629953002ACFBE /* MasterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MasterViewController.xib; sourceTree = "<group>"; };
 		4D869A721C629DF5002ACFBE /* Subtitle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Subtitle.swift; sourceTree = "<group>"; };
 		4D869A741C62A57B002ACFBE /* MovieDraggable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieDraggable.swift; sourceTree = "<group>"; };
+		4DFE53FB1C64A501003033FB /* SubtleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SubtleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4DFE53FF1C64A501003033FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4DFE54051C64A51D003033FB /* MovieTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieTest.swift; sourceTree = "<group>"; };
 		68EEADF95286D34C394800BF /* Pods-Subtle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Subtle.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Subtle/Pods-Subtle.debug.xcconfig"; sourceTree = "<group>"; };
 		A038DE9E7C573831D6516F93 /* Pods_Subtle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Subtle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC221EA3B77A05056D6FF04B /* Pods-Subtle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Subtle.release.xcconfig"; path = "Pods/Target Support Files/Pods-Subtle/Pods-Subtle.release.xcconfig"; sourceTree = "<group>"; };
@@ -41,6 +55,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4DFE53F81C64A501003033FB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -48,6 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				4D869A5D1C629631002ACFBE /* Subtle */,
+				4DFE53FC1C64A501003033FB /* SubtleTests */,
 				4D869A5C1C629631002ACFBE /* Products */,
 				54938BBDDD6C56D394437C7E /* Pods */,
 				983AFB118EA047DA304B7C89 /* Frameworks */,
@@ -58,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				4D869A5B1C629631002ACFBE /* Subtle.app */,
+				4DFE53FB1C64A501003033FB /* SubtleTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -91,6 +114,15 @@
 				4D869A721C629DF5002ACFBE /* Subtitle.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		4DFE53FC1C64A501003033FB /* SubtleTests */ = {
+			isa = PBXGroup;
+			children = (
+				4DFE53FF1C64A501003033FB /* Info.plist */,
+				4DFE54051C64A51D003033FB /* MovieTest.swift */,
+			);
+			path = SubtleTests;
 			sourceTree = "<group>";
 		};
 		54938BBDDD6C56D394437C7E /* Pods */ = {
@@ -133,6 +165,24 @@
 			productReference = 4D869A5B1C629631002ACFBE /* Subtle.app */;
 			productType = "com.apple.product-type.application";
 		};
+		4DFE53FA1C64A501003033FB /* SubtleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4DFE54021C64A501003033FB /* Build configuration list for PBXNativeTarget "SubtleTests" */;
+			buildPhases = (
+				4DFE53F71C64A501003033FB /* Sources */,
+				4DFE53F81C64A501003033FB /* Frameworks */,
+				4DFE53F91C64A501003033FB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4DFE54011C64A501003033FB /* PBXTargetDependency */,
+			);
+			name = SubtleTests;
+			productName = SubtleTests;
+			productReference = 4DFE53FB1C64A501003033FB /* SubtleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -145,6 +195,10 @@
 				TargetAttributes = {
 					4D869A5A1C629631002ACFBE = {
 						CreatedOnToolsVersion = 7.2;
+					};
+					4DFE53FA1C64A501003033FB = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 4D869A5A1C629631002ACFBE;
 					};
 				};
 			};
@@ -162,6 +216,7 @@
 			projectRoot = "";
 			targets = (
 				4D869A5A1C629631002ACFBE /* Subtle */,
+				4DFE53FA1C64A501003033FB /* SubtleTests */,
 			);
 		};
 /* End PBXProject section */
@@ -174,6 +229,13 @@
 				4D869A611C629631002ACFBE /* Assets.xcassets in Resources */,
 				4D869A641C629631002ACFBE /* MainMenu.xib in Resources */,
 				4D869A6E1C629953002ACFBE /* MasterViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4DFE53F91C64A501003033FB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,7 +301,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4DFE53F71C64A501003033FB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4DFE54061C64A51D003033FB /* MovieTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4DFE54011C64A501003033FB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4D869A5A1C629631002ACFBE /* Subtle */;
+			targetProxy = 4DFE54001C64A501003033FB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		4D869A621C629631002ACFBE /* MainMenu.xib */ = {
@@ -359,6 +437,32 @@
 			};
 			name = Release;
 		};
+		4DFE54031C64A501003033FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = SubtleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = me.mvader.subtle.SubtleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Subtle.app/Contents/MacOS/Subtle";
+			};
+			name = Debug;
+		};
+		4DFE54041C64A501003033FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = SubtleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = me.mvader.subtle.SubtleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Subtle.app/Contents/MacOS/Subtle";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -379,6 +483,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		4DFE54021C64A501003033FB /* Build configuration list for PBXNativeTarget "SubtleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4DFE54031C64A501003033FB /* Debug */,
+				4DFE54041C64A501003033FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

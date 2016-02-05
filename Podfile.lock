@@ -5,18 +5,18 @@ PODS:
     - AEXML
     - Alamofire
   - GZIP (1.1.1)
-  - Subtitler (0.1.0):
+  - Subtitler (0.1.1):
     - AlamofireXMLRPC
     - GZIP
 
 DEPENDENCIES:
-  - Subtitler (= 0.1.0)
+  - Subtitler (= 0.1.1)
 
 SPEC CHECKSUMS:
   AEXML: 0e2f657fdc67e17905682a06d55583a863d80803
   Alamofire: 5f730ba29fd113b7ddd71c1e65d0c630acf5d7b0
   AlamofireXMLRPC: e07967849f7a43cd60eee336c29afcbe7ca277a9
   GZIP: f8beb59597f651e6970a45b816508a9c6d700b77
-  Subtitler: d97c93cfa11b49411f9d1472be99b81ca9b2db7b
+  Subtitler: be15fa6d4b0256ebe86135cf64f1a91bbc6b73ba
 
 COCOAPODS: 0.39.0
