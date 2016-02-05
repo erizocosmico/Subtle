@@ -12,6 +12,16 @@ protocol FileQueueDelegate {
     func queueFile(path: String)
 }
 
+let movieExtensions = ["mov", "avi", "mkv", "mp4"]
+
+private func isMovie(path: String) -> Bool {
+    if let idx = path.characters.reverse().indexOf(".") {
+        let ext = path.substringFromIndex(idx.base)
+        return movieExtensions.contains(ext)
+    }
+    return false
+}
+
 class MovieDraggable: NSView {
 
     var delegate: FileQueueDelegate?
@@ -47,10 +57,6 @@ class MovieDraggable: NSView {
             return true
         }
         return false
-    }
-
-    func isMovie(path: String) -> Bool {
-        return true
     }
     
 }
