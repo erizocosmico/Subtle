@@ -12,16 +12,6 @@ protocol FileQueueDelegate {
     func queueFile(path: String)
 }
 
-let movieExtensions = ["mov", "avi", "mkv", "mp4"]
-
-public func isMovie(path: String) -> Bool {
-    if let idx = path.characters.reverse().indexOf(".") {
-        let ext = path.substringFromIndex(idx.base)
-        return movieExtensions.contains(ext)
-    }
-    return false
-}
-
 class MovieDraggable: NSView {
 
     var delegate: FileQueueDelegate?

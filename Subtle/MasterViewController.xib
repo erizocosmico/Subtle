@@ -7,14 +7,139 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="MasterViewController" customModule="Subtle" customModuleProvider="target">
             <connections>
+                <outlet property="filesTableView" destination="qTH-Tn-Xko" id="Sqh-kN-7rT"/>
+                <outlet property="intro" destination="awb-vd-UZs" id="pwy-wv-YFM"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
             </connections>
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
-        <customView id="Hz6-mo-xeY" customClass="MovieDraggable" customModule="Subtle" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="480" height="272"/>
+        <customView wantsLayer="YES" id="Hz6-mo-xeY" customClass="MovieDraggable" customModule="Subtle" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="480" height="350"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <scrollView fixedFrame="YES" borderType="none" autohidesScrollers="YES" horizontalLineScroll="37" horizontalPageScroll="10" verticalLineScroll="37" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uqf-PT-ges">
+                    <rect key="frame" x="0.0" y="0.0" width="480" height="350"/>
+                    <clipView key="contentView" wantsLayer="YES" ambiguous="YES" drawsBackground="NO" copiesOnScroll="NO" id="0sb-Fs-KTO">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="350"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" multipleSelection="NO" emptySelection="NO" autosaveColumns="NO" typeSelect="NO" rowHeight="35" rowSizeStyle="automatic" viewBased="YES" id="qTH-Tn-Xko">
+                                <rect key="frame" x="0.0" y="0.0" width="483" height="350"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <size key="intercellSpacing" width="3" height="2"/>
+                                <color key="backgroundColor" red="0.98431372549019602" green="0.97254901960784312" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="gridColor" red="0.91177634231707194" green="0.91177634231707194" blue="0.91177634231707194" alpha="0.0" colorSpace="calibratedRGB"/>
+                                <tableColumns>
+                                    <tableColumn identifier="FileColumn" width="480" minWidth="40" maxWidth="1000" id="Kmx-kq-cae">
+                                        <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border">
+                                            <font key="font" metaFont="smallSystem"/>
+                                            <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
+                                        </tableHeaderCell>
+                                        <textFieldCell key="dataCell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" title="Text Cell" id="Wt0-wB-0u8">
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                        <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
+                                        <prototypeCellViews>
+                                            <tableCellView id="TLQ-Wk-R3L">
+                                                <rect key="frame" x="1" y="1" width="480" height="35"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <subviews>
+                                                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" allowsExpansionToolTips="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pxo-lh-Wyt">
+                                                        <rect key="frame" x="13" y="12" width="400" height="20"/>
+                                                        <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" alignment="left" title="Table View Cell" id="WFd-hR-f7o">
+                                                            <font key="font" size="13" name="AvenirNext-Medium"/>
+                                                            <color key="textColor" red="0.32549019610000002" green="0.31372549020000001" blue="0.3411764706" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                        </textFieldCell>
+                                                    </textField>
+                                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d9u-zp-JPX">
+                                                        <rect key="frame" x="430" y="3" width="40" height="30"/>
+                                                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="Pending" id="i7d-Q3-v60"/>
+                                                    </imageView>
+                                                </subviews>
+                                                <connections>
+                                                    <outlet property="imageView" destination="d9u-zp-JPX" id="yh5-mx-84w"/>
+                                                    <outlet property="textField" destination="pxo-lh-Wyt" id="lcg-QH-ddJ"/>
+                                                </connections>
+                                            </tableCellView>
+                                        </prototypeCellViews>
+                                    </tableColumn>
+                                </tableColumns>
+                                <connections>
+                                    <outlet property="dataSource" destination="-2" id="TEt-0h-EdU"/>
+                                    <outlet property="delegate" destination="-2" id="j88-Xa-P4Y"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <backgroundFilters>
+                            <ciFilter name="CIGaussianBlur">
+                                <configuration>
+                                    <null key="inputImage"/>
+                                    <real key="inputRadius" value="20"/>
+                                </configuration>
+                            </ciFilter>
+                        </backgroundFilters>
+                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="deviceWhite"/>
+                    </clipView>
+                    <backgroundFilters>
+                        <ciFilter name="CIGaussianBlur">
+                            <configuration>
+                                <null key="inputImage"/>
+                                <real key="inputRadius" value="10"/>
+                            </configuration>
+                        </ciFilter>
+                    </backgroundFilters>
+                    <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="SaF-vF-zlN">
+                        <rect key="frame" x="-100" y="-100" width="480" height="16"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </scroller>
+                    <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="WEm-vP-dFp">
+                        <rect key="frame" x="224" y="17" width="15" height="102"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </scroller>
+                </scrollView>
+                <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="awb-vd-UZs">
+                    <rect key="frame" x="0.0" y="0.0" width="480" height="350"/>
+                    <subviews>
+                        <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fma-Wb-d7h">
+                            <rect key="frame" x="115" y="107" width="250" height="23"/>
+                            <textFieldCell key="cell" controlSize="mini" sendsActionOnEndEditing="YES" alignment="center" title="Drop here the your TV Shows or movies!" id="lCf-il-npT">
+                                <font key="font" size="13" name="AvenirNext-MediumItalic"/>
+                                <color key="textColor" red="0.32549019610000002" green="0.31372549020000001" blue="0.3411764706" alpha="0.70024245689999998" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.32549019610000002" green="0.31372549020000001" blue="0.3411764706" alpha="0.41419719827586204" colorSpace="calibratedRGB"/>
+                            </textFieldCell>
+                        </textField>
+                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FvB-Pt-9nC">
+                            <rect key="frame" x="187" y="143" width="107" height="28"/>
+                            <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Drop here!" id="Ru5-hk-6oO">
+                                <font key="font" size="20" name="AvenirNext-Bold"/>
+                                <color key="textColor" red="0.32549019610000002" green="0.31372549020000001" blue="0.3411764706" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                            </textFieldCell>
+                        </textField>
+                        <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nQN-uJ-a68">
+                            <rect key="frame" x="216" y="196" width="48" height="48"/>
+                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="Drop" id="8q0-7H-faF"/>
+                        </imageView>
+                    </subviews>
+                </customView>
+            </subviews>
+            <backgroundFilters>
+                <ciFilter name="CIGaussianBlur">
+                    <configuration>
+                        <null key="inputImage"/>
+                        <real key="inputRadius" value="10"/>
+                    </configuration>
+                </ciFilter>
+            </backgroundFilters>
         </customView>
     </objects>
+    <resources>
+        <image name="Drop" width="62" height="81"/>
+        <image name="Pending" width="24" height="24"/>
+    </resources>
 </document>

@@ -18,6 +18,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         masterViewController = MasterViewController(nibName: "MasterViewController", bundle: nil)
         window.contentView?.addSubview(masterViewController.view)
         masterViewController.view.frame = window.contentView!.bounds
+        self.window.styleMask = self.window.styleMask | NSFullSizeContentViewWindowMask
     }
 
     func applicationWillTerminate(aNotification: NSNotification) {
