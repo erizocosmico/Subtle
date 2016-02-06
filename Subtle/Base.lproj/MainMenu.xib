@@ -31,7 +31,11 @@
                                 </connections>
                             </menuItem>
                             <menuItem isSeparatorItem="YES" id="VOq-y0-SEH"/>
-                            <menuItem title="Preferences…" keyEquivalent="," id="BOF-NM-1cW"/>
+                            <menuItem title="Preferences…" keyEquivalent="," id="BOF-NM-1cW">
+                                <connections>
+                                    <action selector="openPreferences:" target="-1" id="g9J-iY-xGe"/>
+                                </connections>
+                            </menuItem>
                             <menuItem isSeparatorItem="YES" id="wFC-TO-SCJ"/>
                             <menuItem title="Hide Subtle" keyEquivalent="h" id="Olw-nP-bQN">
                                 <connections>

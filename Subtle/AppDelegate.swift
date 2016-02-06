@@ -7,12 +7,14 @@
 //
 
 import Cocoa
+import MASPreferences
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
     @IBOutlet weak var window: NSWindow!
     var masterViewController: MasterViewController!
+    private var preferencesWindow: MASPreferencesWindowController?
 
     func applicationDidFinishLaunching(aNotification: NSNotification) {
         masterViewController = MasterViewController(nibName: "MasterViewController", bundle: nil)
@@ -25,6 +27,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // Insert code here to tear down your application
     }
 
+}
+
+// MARK - Actions
+extension AppDelegate {
+
     @IBAction func openDocument(sender: AnyObject?) {
         let openPanel = NSOpenPanel()
         openPanel.allowsMultipleSelection = true
@@ -36,13 +43,30 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                     return $0.absoluteString.substringFromIndex(
                         $0.absoluteString.startIndex.advancedBy(7)
                     )
-                }.forEach{ path in
-                    if isMovie(path) {
-                        self.masterViewController.queueFile(path)
-                    }
+                    }.forEach{ path in
+                        if isMovie(path) {
+                            self.masterViewController.queueFile(path)
+                        }
                 }
             }
         }
+    }
+
+    @IBAction func openPreferences(sender: AnyObject?) {
+        preferencesWindowController().showWindow(nil)
+    }
+
+}
+
+// Mark - MASPreferences
+extension AppDelegate {
+
+    func preferencesWindowController() -> NSWindowController {
+        if preferencesWindow == nil {
+            let controllers = [LanguagePreferencesViewController()]
+            preferencesWindow = MASPreferencesWindowController(viewControllers: controllers, title: "Preferences")
+        }
+        return preferencesWindow!
     }
 
 }

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+   Config.plist
+   Subtle
+
+   Created by Miguel Molina on 06/02/16.
+   Copyright (c) 2016 Miguel Molina. All rights reserved.
+-->
+<plist version="1.0">
+    <dict>
+        <key>OSUserAgent</key>
+        <string>OSTestUserAgent</string>
+    </dict>
+</plist>

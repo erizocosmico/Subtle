@@ -26,7 +26,16 @@ class MasterViewController: NSViewController {
             v.delegate = self
         }
 
-        self.client = Subtitler(lang:"en", userAgent:"OSTestUserAgent")
+        var ua = "OSTestUserAgent"
+        if let path = NSBundle.mainBundle().pathForResource("Config", ofType: "plist") {
+            if let dict = NSDictionary(contentsOfFile: path) {
+                if let userAgent = dict.objectForKey("OSUserAgent") as? String {
+                    ua = userAgent
+                }
+            }
+        }
+
+        self.client = Subtitler(lang: getLang(), userAgent: ua)
         filesTableView.layer?.hidden = true
     }
 
@@ -44,7 +53,7 @@ class MasterViewController: NSViewController {
         reload(row)
         lastConsumed += 1
 
-        client?.download(files[row].path) { result in
+        client?.download(files[row].path, lang: getLang()) { result in
             switch result {
             case .Success(_):
                 self.files[row].status = .Success
@@ -90,6 +99,11 @@ extension MasterViewController: NSTableViewDelegate, NSTableViewDataSource {
 
     func selectionShouldChangeInTableView(tableView: NSTableView) -> Bool {
         return false
+    }
+
+    func getLang() -> String {
+        let lang = NSUserDefaults.standardUserDefaults().integerForKey("language")
+        return languages[lang].ISO639
     }
 
 }
