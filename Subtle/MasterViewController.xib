@@ -49,9 +49,9 @@
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
                                                     <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" allowsExpansionToolTips="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pxo-lh-Wyt">
-                                                        <rect key="frame" x="13" y="12" width="400" height="20"/>
+                                                        <rect key="frame" x="13" y="9" width="400" height="20"/>
                                                         <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" alignment="left" title="Table View Cell" id="WFd-hR-f7o">
-                                                            <font key="font" size="13" name="AvenirNext-Medium"/>
+                                                            <font key="font" size="14" name="SanFranciscoText-Light"/>
                                                             <color key="textColor" red="0.32549019610000002" green="0.31372549020000001" blue="0.3411764706" alpha="1" colorSpace="calibratedRGB"/>
                                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                         </textFieldCell>
@@ -107,24 +107,24 @@
                     <subviews>
                         <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fma-Wb-d7h">
                             <rect key="frame" x="115" y="107" width="250" height="23"/>
-                            <textFieldCell key="cell" controlSize="mini" sendsActionOnEndEditing="YES" alignment="center" title="Drop here the your TV Shows or movies!" id="lCf-il-npT">
-                                <font key="font" size="13" name="AvenirNext-MediumItalic"/>
+                            <textFieldCell key="cell" controlSize="mini" sendsActionOnEndEditing="YES" alignment="center" title="Drop here your TV Shows or movies!" id="lCf-il-npT">
+                                <font key="font" size="13" name="SanFranciscoText-Light"/>
                                 <color key="textColor" red="0.32549019610000002" green="0.31372549020000001" blue="0.3411764706" alpha="0.70024245689999998" colorSpace="calibratedRGB"/>
                                 <color key="backgroundColor" red="0.32549019610000002" green="0.31372549020000001" blue="0.3411764706" alpha="0.41419719827586204" colorSpace="calibratedRGB"/>
-                            </textFieldCell>
-                        </textField>
-                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FvB-Pt-9nC">
-                            <rect key="frame" x="187" y="143" width="107" height="28"/>
-                            <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Drop here!" id="Ru5-hk-6oO">
-                                <font key="font" size="20" name="AvenirNext-Bold"/>
-                                <color key="textColor" red="0.32549019610000002" green="0.31372549020000001" blue="0.3411764706" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                             </textFieldCell>
                         </textField>
                         <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nQN-uJ-a68">
                             <rect key="frame" x="216" y="196" width="48" height="48"/>
                             <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="Drop" id="8q0-7H-faF"/>
                         </imageView>
+                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FvB-Pt-9nC">
+                            <rect key="frame" x="187" y="146" width="107" height="33"/>
+                            <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Drop here" id="Ru5-hk-6oO">
+                                <font key="font" size="23" name="SanFranciscoText-Thin"/>
+                                <color key="textColor" red="0.32549019610000002" green="0.31372549020000001" blue="0.3411764706" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                            </textFieldCell>
+                        </textField>
                     </subviews>
                 </customView>
             </subviews>
@@ -139,7 +139,7 @@
         </customView>
     </objects>
     <resources>
-        <image name="Drop" width="62" height="81"/>
+        <image name="Drop" width="56" height="76"/>
         <image name="Pending" width="24" height="24"/>
     </resources>
 </document>

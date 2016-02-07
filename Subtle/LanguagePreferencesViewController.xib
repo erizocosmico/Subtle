@@ -19,17 +19,9 @@
             <subviews>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qNM-Z2-dyL">
                     <rect key="frame" x="18" y="143" width="363" height="25"/>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Subtitles language:" id="rIT-19-DHz">
-                        <font key="font" size="13" name="AvenirNext-Medium"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Subtitles language" id="rIT-19-DHz">
+                        <font key="font" size="15" name="SanFranciscoText-Light"/>
                         <color key="textColor" red="0.32549019610000002" green="0.31372549020000001" blue="0.3411764706" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                    </textFieldCell>
-                </textField>
-                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ntt-SY-MmB">
-                    <rect key="frame" x="18" y="87" width="363" height="48"/>
-                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="Select the language of the subtitles files downloaded by this application." id="uba-QA-Kng">
-                        <font key="font" size="13" name="AvenirNext-Regular"/>
-                        <color key="textColor" red="0.32549019610000002" green="0.31372549020000001" blue="0.3411764706" alpha="0.70024245689999998" colorSpace="calibratedRGB"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
@@ -44,6 +36,14 @@
                         <action selector="onDropdownChange:" target="-2" id="EXz-Yf-Vgo"/>
                     </connections>
                 </popUpButton>
+                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ntt-SY-MmB">
+                    <rect key="frame" x="18" y="76" width="363" height="48"/>
+                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="Select the language of the subtitles files downloaded by this application." id="uba-QA-Kng">
+                        <font key="font" size="13" name="SanFranciscoText-Regular"/>
+                        <color key="textColor" red="0.32549019610000002" green="0.31372549020000001" blue="0.3411764706" alpha="0.70024245689999998" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
             </subviews>
             <point key="canvasLocation" x="204.5" y="264"/>
         </customView>
