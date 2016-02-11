@@ -3,7 +3,7 @@
 
 Mac OS X app to download subtitles for your movies and TV shows with a drag and drop.
 
-<center><img src="http://i.imgur.com/AAVsipC.png" width="600" alt="View of the app" /></center>
+<center><img src="http://i.imgur.com/nf9qN7c.png" width="600" alt="View of the app" /></center>
 
 You can download the compiled version of the app in [releases](https://github.com/mvader/Subtle/releases).
 
