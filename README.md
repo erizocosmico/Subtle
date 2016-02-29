@@ -22,3 +22,5 @@ You want to compile your own version? That's fine, Subtle is and **will always b
 * Clone the repo
 * `pod install`
 * Build the app
+
+[![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)](http://forthebadge.com)
