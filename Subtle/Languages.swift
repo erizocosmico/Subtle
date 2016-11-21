@@ -18,6 +18,7 @@ let languages = [
     Language(ISO639: "es", name: "Spanish"),
     Language(ISO639: "de", name: "German"),
     Language(ISO639: "zh", name: "Chinese"),
+    Language(ISO639: "cz", name: "Czech"),
     Language(ISO639: "da", name: "Danish"),
     Language(ISO639: "nl", name: "Dutch"),
     Language(ISO639: "fi", name: "Finnish"),
@@ -28,6 +29,7 @@ let languages = [
     Language(ISO639: "no", name: "Norwegian"),
     Language(ISO639: "pt", name: "Portuguese"),
     Language(ISO639: "ru", name: "Russian"),
+    Language(ISO639: "sk", name: "Slovak"),
     Language(ISO639: "sv", name: "Swedish"),
     Language(ISO639: "tr", name: "Turkish"),
 ]
